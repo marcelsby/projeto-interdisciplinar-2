@@ -1,9 +1,0 @@
-# Marcel Barbosa 2º TADS IFG JATAÍ
-print('*** CALCULADORA DE MÉDIA ESCOLAR ***')
-
-nota1 = float(input('Digite a primeira nota: '))
-nota2 = float(input('Digite a segunda nota: '))
-
-if 0 > nota1 > 10:
-  print('Nota inválida digitada!')
-  return 1

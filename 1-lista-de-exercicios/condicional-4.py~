@@ -1,9 +1,0 @@
-# Marcel Barbosa 2º TADS IFG JATAÍ
-print('### VOGAL OU CONSOANTE? ###')
-
-letter = str(input('Digite uma letra: '))
-
-if letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u':
-  print('A letra inserida é uma vogal!')
-else:
-  print('A letra inserida é uma consoante')

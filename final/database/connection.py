@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import errorcode
+
 try:
 	db_connection = mysql.connector.connect(host='localhost', user='root', password='123456', database='pytest')
 	print('Database connection made!')

@@ -1,8 +1,12 @@
 import pandas as pd
-import numpy as np
 
-covid = pd.read_csv('test.csv', delimiter=';')
+# Criando um dataframe
+covid = pd.read_csv('./final/archive/test.csv', delimiter=';')
 
 print(covid)
 
-print(type(covid))
+for index, a in covid.iterrows():
+    record = [index[1]]
+    print(record)
+
+covid.to_sql(name='covid', con=)

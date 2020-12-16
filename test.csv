@@ -1,0 +1,8 @@
+regiao;estado;municipio;coduf;codmun;codRegiaoSaude;nomeRegiaoSaude;data;semanaEpi;populacaoTCU2019;casosAcumulado;casosNovos;obitosAcumulado;obitosNovos;Recuperadosnovos;emAcompanhamentoNovos;interior/metropolitana
+Brasil;;;76;;;;2020-02-25;9;210147125;0;0;0;0;;;
+Brasil;;;76;;;;2020-04-19;17;210147125;38654;2055;2462;115;22130;14062;
+Norte;AM;Canutama;13;130090;13006;REGIONAL PURUS;2020-09-14;38;15629;387;5;0;0;;;0
+Nordeste;CE;Carnaubal;23;230340;23013;13ª REGIAO TIANGUA;2020-06-10;24;17606;47;1;0;0;;;0
+Sudeste;MG;Fernandes Tourinho;31;312580;31036;GOVERNADOR VALADARES;2020-10-19;43;3431;21;0;4;0;;;0
+Sul;PR;Doutor Camargo;41;410730;41015;15ª RS MARINGA;2020-06-22;26;5979;5;0;0;0;;;0
+Centro-Oeste;GO;Jataí;52;521190;52016;SUDOESTE II;2020-07-07;28;100882;408;4;3;0;;;0

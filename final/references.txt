@@ -1,0 +1,15 @@
+## PANDAS
+
+* Método .to_sql:
+	https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html
+
+* Lendo um arquivo .csv para dentro de um DataFrame:
+	https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_sql.html#pandas.read_sql
+
+## SQL ALCHEMY
+
+* Criando uma engine com o SQL Alchemy:
+	https://docs.sqlalchemy.org/en/13/core/connections.html
+
+## Trabalhando com dependências no Python:
+https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format

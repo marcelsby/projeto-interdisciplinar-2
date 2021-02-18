@@ -36,7 +36,7 @@ csv = Table(
 csv.create(engine)
 
 # Cria um dataframe com os dados do nosso .csv
-covid = pd.read_csv('./data/full_benchmark.csv', delimiter=';')
+covid = pd.read_csv('./data/full_database.csv', delimiter=';')
 
-# Anexa os dados do dataframe "covid" a tabela "csv" do nosso banco de dados
-covid.to_sql(name='csv', con=engine, method='multi', chunksize=10000, if_exists='append', index_label='indice')
+# Anexa os dados do dataframe "covid" a tabela "otimizado" do nosso banco de dados
+covid.to_sql(name='otimizado', con=engine, method='multi', chunksize=10000, if_exists='append', index_label='indice')

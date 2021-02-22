@@ -10,5 +10,5 @@ engine = db.create_engine(SQLALCHEMY_DATABASE_URI, echo=True)
 # Cria um dataframe com os dados do nosso .csv
 covid = pd.read_csv('./data/full_database.csv', delimiter=';')
 
-# Cria a tabela "nao_otimizado" no banco e insere o .csv nela
-covid.to_sql(name='nao_otimizado', con=engine)
+# Cria a tabela "nao-otimizado" no banco e insere o .csv nela
+covid.to_sql(name='nao-otimizado', con=engine)

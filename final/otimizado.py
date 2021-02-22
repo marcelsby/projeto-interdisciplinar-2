@@ -11,7 +11,7 @@ engine = create_engine(SQLALCHEMY_DATABASE_URI, echo=True)
 meta = MetaData()
 
 csv = Table(
-    'csv', meta,
+    'otimizado', meta,
     Column('indice', Integer),
     Column('regiao', String(20)),
     Column('estado', String(2)),

@@ -3,7 +3,7 @@
 function getLogFileName { 
     read -p "Digite um nome para identificar seu arquivo de log (PADRÃO: benchmark-log):" logfileName
     logfileName=${pid:-"./statistics/benchmark-log"}
-    logfileExtension=".txt"
+    logfileExtension=".csv"
     logfileParsed="$logfileName$logfileExtension"
     echo $logfileParsed
 }
@@ -21,11 +21,11 @@ function getPid () {
 
 function getHeader () {
     local name=$(ps -q $pid -o comm=)
-    echo "PID: $pid"
-    echo "Nome: $name"
-    echo "Data do teste: $(date +"%d-%m-%Y")"
+    echo "PID,$pid,"
+    echo "Nome,$name,"
+    echo "Data do teste,$(date +"%d-%m-%Y"),"
     printf "\n"
-    echo "$(ps aux | sed -n 1p | awk '{ print "Timestamp "$3" RAM" }')"
+    echo "$(ps aux | sed -n 1p | awk '{ print "Timestamp,"$3",RAM," }')"
 }
 
 function getRamInMB () {
@@ -48,7 +48,7 @@ function getLog () {
         getRamInMB
         local ramUsage="$?M" 
 
-        echo "$timestamp $cpuUsagePercent $ramUsage" | column -t >> $logfileParsed
+        echo "$timestamp,$cpuUsagePercent,$ramUsage," | column -t >> $logfileParsed
         sleep 3s    
     done
 }
@@ -57,5 +57,7 @@ getLogFileName
 getPid
 getHeader > $logfileParsed
 getLog
+
+sed -i '$d' $logfileParsed
 
 printf "Concluído com sucesso!\n"

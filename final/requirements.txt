@@ -1,5 +1,0 @@
-# Dependências do projeto
-# Execute no diretório deste arquivo "pip install -r requirements.txt" para instalá-las
-sqlalchemy
-pandas
-pymysql

@@ -1,24 +1,22 @@
-# Projeto Interdisciplinar II
+![Banner](./assets/banner.png)
+
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 ## Sumário
 1. Introdução
 2. Requisitos
 3. Utilização
 4. Resultados
-6. Ferramentas utilizadas no projeto
-7. Considerações finais
-
-#
+5. Ferramentas utilizadas no projeto
+6. Considerações finais
 
 ## 1. Introdução
 Repositório dedicado ao trabalho desenvolvido no período 2020/2 na matéria Projeto Interdisciplinar II do curso de Tecnologia e Análise em Desenvolvimento de Software (TADS) do IFG Câmpus Jataí. Matéria que neste período foi lecionada pelo Docente [Gustavo de Assis Costa](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4759259U2).
 
-De forma resumida, a proposta do projeto é composta pela inserção do CSV (comma-separated-values) disponibilizado no site [Coronavírus Brasil](https://covid.saude.gov.br) em um banco de dados, seja ele SQL ou NoSQL, por meio de um script utilizando a linguagem Python. Para consultar o enunciado completo do projeto [clique aqui]().
+De forma resumida, a proposta do projeto é composta pela inserção do CSV (comma-separated-values) disponibilizado no site [Coronavírus Brasil](https://covid.saude.gov.br) em um banco de dados, seja ele SQL ou NoSQL, por meio de um script utilizando a linguagem Python. Para consultar o enunciado completo do projeto [clique aqui](https://github.com/marcelsby/projeto-interdisciplinar-2/blob/master/assets/enunciado-projeto.pdf).
 
 
 ![Site Coronavírus Brasil](./assets/site-coronavirus-brasil.png)
-
-#
 
 ## 2. Requisitos
 - Python >= 3.8
@@ -26,7 +24,7 @@ De forma resumida, a proposta do projeto é composta pela inserção do CSV (com
 - Última versão de algumas bibliotecas Python
 - MySQL >= 8.0.21
 
-### Como instalar as bibliotecas necessárias
+### Instalação das bibliotecas necessárias
 O gerenciador de pacotes `pip` permite a instalação de várias bibliotecas de uma vez a partir de um [arquivo de texto comum](https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format). Então:
 
 1. Clone o repositório:
@@ -89,8 +87,8 @@ Para solucionar o problema relacionado a incoerência da tipagem dos dados da ta
 
 Então eu consultei sua documentação relacionada a [criação de tabelas](https://docs.sqlalchemy.org/en/14/core/metadata.html) e dentro do meu código Python utilizei a API do SQLAlchemy para criar uma tabela com tipos mais atômicos e coerentes com o contexto do CSV.
 
-## 5. Resultados
-Após todas as otimizações feitas e testadas eu desenvolvi o shell script `logger.sh` mencionado na seção 3 para monitorar e armazenar o uso dos recursos computacionais pelo processo do Python.
+### Coleta de resultados
+Após todas as otimizações feitas e testadas eu desenvolvi o shell script `logger.sh` mencionado na seção 3 para monitorar e armazenar o uso dos recursos computacionais e tempo gasto pelo processo de importação.
 
 A partir dos dados coletados de cada código eu produzi gráficos onde podemos notar a diferença entre o script otimizado para o não otimizado.
 
@@ -106,19 +104,35 @@ Os resultados podem ser conferidos abaixo.
 ![Uso de CPU - Script otimizado](./src/final/benchmarks/graphics/otimizado_CPU.svg)
 ![Uso de CPU - Script otimizado](./src/final/benchmarks/graphics/otimizado_RAM.svg)
 
-### Comparação dos dois scripts
+### Comparação de uso de recursos
 ![Uso de CPU - Versus](./src/final/benchmarks/graphics/versus_CPU.svg)
 ![Uso de CPU - Versus](./src/final/benchmarks/graphics/versus_RAM.svg)
 
+### Comparação de tempo de execução
+
+- Otimizado
+
+![Tempo de execução - otimizado](./src/final/benchmarks/screenshots/otimizado.png)
+
+- Não Otimizado
+
+![Tempo de execução - não otimizado](./src/final/benchmarks/screenshots/nao-otimizado.png)
+
+### Curiosidades
 - [O que é Resident Set Size (RSS)? (Explicação resumida)](https://stackoverflow.com/questions/7880784/what-is-rss-and-vsz-in-linux-memory-management)
 
 - [RSS mais a fundo](https://lwn.net/Articles/230975/) 
 
-## 6. Ferramentas utilizadas no projeto
+### Conclusão
+Após toda a exposição dos resultados é possível concluir que o script otimizado está fazendo um uso muito mais inteligente dos recursos de processamento e armazenamento principal. 
+
+Em relação ao tempo de execução o script otimizado tem um tempo de execução maior (aproximadamente 2 minutos a mais) comparado com o script não otimizado, porém neste ponto temos ressalvas, eu executei o teste em um i5 de 2ª geração trabalhando com *chunks* de 10.000 registros por vez, um hardware totalmente inferior do que idealmente encontraríamos em produção, ambiente no qual poderíamos aumentar o tamanho dos chunks.
+
+## 5. Principais ferramentas utilizadas no projeto
 - Visual Studio Code (Codificação dos scripts em Python)
-- LibreOffice Calc (Organização dos resultados do benchmark e montagem dos gráficos)
+- LibreOffice Calc (Organização dos resultados e montagem dos gráficos)
 - Neovim (Codificação do script de monitoramento)
 - GitKraken (Versionamento de código)
 
-## 7. Considerações finais
-
+## 6. Considerações finais
+Por fim agradeço primeiramente a você por ter lido essa documentação, também agradeço ao professor Gustavo que propôs esse trabalho super instigante, a toda minha família do CERCOMP que me deu o apoio necessário para executar a evolução desse trabalho e agradeço também a todas as pessoas que confeccionaram tutoriais onde eu pude ampliar meu conhecimento e refinar esse trabalho.

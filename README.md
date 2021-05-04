@@ -25,7 +25,7 @@ De forma resumida, a proposta do projeto é composta pela inserção do CSV (com
 - MySQL >= 8.0.21
 
 ### Instalação das bibliotecas necessárias
-O gerenciador de pacotes `pip` permite a instalação de várias bibliotecas de uma vez a partir de um [arquivo de texto comum](https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format). Então:
+O gerenciador de pacotes `pip` permite a instalação de várias bibliotecas de uma vez a partir de um [arquivo de texto comum](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format). Então:
 
 1. Clone o repositório:
 ```
